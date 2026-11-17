@@ -15,6 +15,7 @@
 
 - **Được** dùng AI (chatbot, Copilot…) để giải thích khái niệm, gợi ý viết script, sửa chính tả. **Ghi công cụ và cách bạn kiểm tra** trong `REPORT.md` mục 8.
 - Các model pre-label trong repo là **một phần của bài**: dùng ở Part 2 trở đi đúng như hướng dẫn.
+- Không để AI/mô hình viết hộ kết luận (phân tích số đo, quyết định Release/Hold/Rework, quy tắc guideline). Bạn phải giải thích được từng câu trong file mình nộp.
 
 ## Tính trung thực của số liệu
 
