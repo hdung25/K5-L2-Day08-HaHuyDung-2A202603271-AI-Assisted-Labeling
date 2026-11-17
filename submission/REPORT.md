@@ -113,6 +113,8 @@ Không đổi các ngưỡng trong `taxonomy.json.rules`. Các ví dụ giúp c�
 
 ## 8. Ghi chú thực hiện
 
+Tôi tự gán tay bốn ảnh gold trên CVAT trước khi chạy mô hình hoặc xem nhãn dự đoán. Bộ gold được dùng làm nhãn tham chiếu để chọn ngưỡng và đánh giá kết quả mô hình. Thời gian gán tay và duyệt nhãn được ghi trực tiếp trong time_log.csv, tương ứng với từng công đoạn thực hiện.
+
 Toàn bộ bài thực hành được tôi triển khai trên Windows 11, sử dụng GPU RTX 3050 Laptop 4 GB, PyTorch 2.6.0+cu124 và CVAT v2.74.1 chạy bằng Docker. Các bước thực hiện đều tuân thủ quy trình và yêu cầu trong hướng dẫn. Detector được chạy trực tiếp trên GPU để lấy kết quả dự đoán thực tế, không sử dụng dữ liệu có sẵn trong data/cache/ để thay thế.
 
 Trong quá trình thực hiện, tôi trực tiếp quan sát ảnh gốc, xác định đối tượng, gán nhãn thủ công và điều chỉnh tọa độ bounding box trên CVAT. Các công cụ và script chỉ được sử dụng để hỗ trợ thiết lập môi trường, chạy mô hình, kiểm tra nhãn, đối chiếu overlay và tổng hợp kết quả. Sau khi gán nhãn, tôi kiểm tra lại từng ảnh, đồng thời sử dụng validate_labels.py và check_submission.py để bảo đảm nhãn đúng định dạng và đáp ứng yêu cầu. Bốn ảnh tham chiếu được gán nhãn thủ công trước khi xem kết quả dự đoán của detector nhằm hạn chế ảnh hưởng từ mô hình. Tuy nhiên, bộ nhãn này chưa được đối chiếu với một bộ gold độc lập. Thời gian thực hiện được ghi nhận trong time_log.csv, bao gồm cả quá trình xử lý và thao tác trên CVAT.
